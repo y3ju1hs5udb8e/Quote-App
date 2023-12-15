@@ -28,7 +28,7 @@ class HomePage extends ConsumerWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  height: 500,
+                  height: MediaQuery.of(context).size.height * 0.80,
                   alignment: Alignment.center,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -67,7 +67,7 @@ class HomePage extends ConsumerWidget {
             child: Text('$error'),
           );
         },
-        loading: () => CircleAvatar(),
+        loading: () => const Center(child: CircularProgressIndicator()),
       ),
     );
   }
